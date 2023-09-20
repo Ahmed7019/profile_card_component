@@ -31,7 +31,11 @@ body {
   place-items: center;
   min-height: 100vh;
   background-color: var(--dark_cyan);
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 700px, 1200px;
+  background-image: url(../images/bg-pattern-top.svg),
+    url(../images/bg-pattern-bottom.svg);
+  background-position: 8rem -23rem, 50rem 22rem;
 }
 
 .card {
@@ -45,7 +49,7 @@ body {
   position: relative;
   border-radius: 15px;
   background-color: white;
-  box-shadow: 5px 5px 15px 1px var(--very_dark_desaturated_blue);
+  box-shadow: 10px 10px 25px -6px black;
 }
 .bg {
   width: 100%;
@@ -71,7 +75,6 @@ body {
   border: 4px solid white;
   outline: none;
 }
-
 
 hr {
   background-color: lightgray;
@@ -124,12 +127,16 @@ td {
 
 /* Mobile Screen design */
 
-@media (max-width:768px) {
- .card {
-  width: 300px;
- }
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+    background-position: -20rem -12rem, 18rem 13rem;
+  }
+  .card {
+    width: 300px;
+  }
 
- .info {
-  font-size: small;
- }
+  .info {
+    font-size: small;
+  }
 }
